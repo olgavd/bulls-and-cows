@@ -63,4 +63,26 @@ describe('generateSecret', () => {
       'Длинна не должна быть больше основания',
     );
   });
+
+  test.each(
+    Array.from({ length: 21 }, (_, i) => i).filter(
+      (base) => ![2, 8, 10, 16].includes(base),
+    ),
+  )(
+    'Должна выбрасывать ошибку, если основание %i (не 2, 8, 10 или 16)',
+    (invalidBase) => {
+      expect(() => generateSecret(2, invalidBase)).toThrow(
+        'Основание системы счисления должно быть 2, 8, 10 или 16',
+      );
+    },
+  );
+
+  test.each([2, 8, 10, 16])(
+    'Не должна выбрасывать ошибку валидации основания для базы %i',
+    (validBase) => {
+      expect(() => generateSecret(1, validBase)).not.toThrow(
+        'Основание системы счисления должно быть 2, 8, 10 или 16',
+      );
+    },
+  );
 });
