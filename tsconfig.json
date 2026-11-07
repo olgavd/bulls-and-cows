@@ -12,7 +12,8 @@
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
     "allowJs": false,
-    "isolatedModules": true
+    "isolatedModules": true,
+    "types": ["node", "vitest/globals"]
   },
   "include": ["src/**/*"]
 }
