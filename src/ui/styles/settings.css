@@ -1,0 +1,15 @@
+.setting_section {
+    display: flex;
+    justify-content: center;
+}
+
+.setting_div p {
+    text-align: center;
+}
+
+.length_buttons,
+.num_system_buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
