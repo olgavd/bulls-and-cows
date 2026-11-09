@@ -1,0 +1,21 @@
+.filed_label {
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.filed_input {
+    display: block;
+}
+
+.filed_section {
+    display: flex;
+    gap: 2rem;
+}
+
+.field_button_div {
+    display: flex;
+}
+
+.field__button {
+    margin-top: auto;
+}

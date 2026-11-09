@@ -1,0 +1,20 @@
+@import './settings.css';
+@import './header.css';
+@import './field.css';
+@import './result.css';
+@import './leaderboard.css';
+
+html {
+    display: flex;
+    justify-content: center;
+}
+
+body {
+    padding: 0 5rem;
+    max-width: 50rem;
+    width: 30rem;
+}
+
+.hidden {
+    display: none !important;
+}
